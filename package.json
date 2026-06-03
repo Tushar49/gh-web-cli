@@ -1,0 +1,61 @@
+{
+  "name": "gh-web-cli",
+  "version": "0.1.0",
+  "description": "Drive GitHub from your terminal without `git push` — uses your already-running Chrome session via CDP. Built for managed laptops, EMU accounts, and locked-down corporate environments.",
+  "keywords": [
+    "github",
+    "cli",
+    "cdp",
+    "chrome-devtools-protocol",
+    "emu",
+    "managed-laptop",
+    "git",
+    "no-push",
+    "fork-sync",
+    "pull-request",
+    "conflict-resolution"
+  ],
+  "homepage": "https://github.com/Tushar49/gh-web-cli#readme",
+  "bugs": {
+    "url": "https://github.com/Tushar49/gh-web-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tushar49/gh-web-cli.git"
+  },
+  "license": "MIT",
+  "author": "Tushar Agarwal",
+  "type": "module",
+  "bin": {
+    "gh-web-cli": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chrome-remote-interface": "^0.33.3",
+    "citty": "^0.1.6",
+    "consola": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/chrome-remote-interface": "^0.31.14",
+    "@types/node": "^22.10.5",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
