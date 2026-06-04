@@ -43,7 +43,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "chrome-remote-interface": "^0.33.3",
+    "chrome-remote-interface": "^0.34.0",
     "citty": "^0.1.6",
     "consola": "^3.2.3"
   },
