@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest a new GitHub flow to drive, or a behavior change.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What workflow are you stuck on?
+      description: Describe the GitHub action you wish you could do from your terminal but currently can't (with `gh-web-cli` or anything else).
+      placeholder: |
+        I want to mark a PR as draft / undraft it from the terminal without `gh pr ready` failing on EMU auth.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed command shape
+      description: How would the CLI invocation look?
+      placeholder: |
+        gh-web-cli pr ready --pr owner/repo#123 --draft true
+      render: shell
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've tried
+      description: gh CLI? Direct git? A manual browser workflow? What broke?
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Are you willing to draft a PR?
+      options:
+        - label: I can put together a draft PR if pointed at the right files.
